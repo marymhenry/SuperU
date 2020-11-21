@@ -1,0 +1,386 @@
+a {
+    color: white;
+}
+a:hover {
+    color: inherit;
+}
+body {
+    background-color: #FAC900;
+    font-family: 'Nunito', Arial, Helvetica, sans-serif;
+}
+
+/* Header Styles */
+h1 {
+    font-family: Arial;
+    font-size: 35px;
+    padding-bottom: 10px;
+}
+h5 {
+    color: white;
+    font-size: 22px;
+}
+h6 {
+    color: white;
+    font-size: 16px;
+}
+h1, splashDescritpion h1, .colorPrple, .onboardSubtext a{
+    color: #942A9F;
+}
+/* Welcome Styles */
+.welcomeContent{
+    text-align: center;
+    padding: 30px;
+}
+.welcomeContent img{
+    padding: 30px;
+    width: 300px;
+}
+.welcomeDescription{
+    padding-bottom: 30px;
+}
+
+/* Login and Sign Up Styles */
+.loginSignUpIcons i{
+    padding: 10px;
+}
+.signUpTitle{
+    padding-top: 30px;
+}
+
+/* Onboarding Styles */
+.bodyOnboarding    {
+    background-color: #FAC900;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0px 18px 0px 18px;
+}
+.splashDescritpion h1{
+    font-size: 24px;
+}
+.splashContent{
+    text-align: center;
+}
+.onboardCenterText{
+    display: flex;
+    justify-content: center;
+}
+.onboardSubtext a{
+    font-family: Roboto;
+    text-decoration: underline;
+}
+.onBoardingTitle{
+    text-align: center;
+}
+
+/* Modal Styles */
+.modal-title span{
+    font-size: 18px;
+}
+.centerHeader{
+    justify-content: center;
+}
+.modal-header h3{
+    text-align: center;
+}
+.modalIcon{
+    float: left;
+    padding-right: 10px;
+}
+.modalLogo{
+    width: 60px;
+    margin: 30px auto 0px;
+}
+.emailPadding{
+    padding: 1.5rem 2rem 0rem 2rem;
+}
+.facebookModal{
+    padding: 30px;
+    color: #3b5998;
+}
+.modalIconRight-sm{
+    float: right;
+}
+
+/* Logo Styles */
+.centerLogo   {
+    width: 70%;
+    margin: 0 auto;
+}
+.Logo {
+    max-width: 200px;
+    margin-top: 90px;
+    padding-bottom: 30px;
+}
+.logoHrzl {
+    width: 200px;
+    margin-top: 10px;
+    padding-bottom: 10px;
+}
+
+/* Button Styles */
+.btn {
+    margin-bottom: 15px;
+    background-color: #2766A7;
+    outline: none;
+    border-radius: 4px;
+    color: white;
+    width: 100%;
+}
+
+
+
+#hamburger  {
+    width: 35px;
+}
+#phoneLink  {
+    width: 45px;
+    position: absolute;
+    right: 100px;
+    top: 25px;
+}
+#activities {
+    display: flex;
+    justify-items: flex-end;
+}
+.downArrow::after{
+    font-family: "Font Awesome 5 Free"; font-weight: 900; content: " \f107";
+  }
+  .rightArrow::after{
+    font-family: "Font Awesome 5 Free"; font-weight: 900; content: " \f105";
+  }
+
+.passwordResetLogo{
+    margin-top: 35px;
+}
+
+/* Tab Styles */
+.fa-globe{
+    text-shadow:1px 1px #942A9F;
+}
+.fas-icon-styles{
+    padding: 30px;
+} 
+.right-tabs.nav-tabs, .right-tabs.sideways-tabs {
+    height: 100%;
+    flex-direction: column;
+}   
+.right-tabs.nav-tabs {
+    border-bottom: none;
+} 
+.right-tabs.sideways-tabs {
+    border-left: none;
+}
+  
+  .sideways-tabs.right-tabs .nav-item {
+    transform: rotate(90deg);
+    height: 1rem;
+    margin-bottom: calc(9rem - 1rem); }
+  
+  .sideways-tabs.right-tabs .nav-link {
+    width: 9rem;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    border-top-right-radius: 24px;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+    border-top-left-radius: 24px;
+}
+  
+.sideways-tabs.right-tabs .nav-link.active {
+    background-color: #fefefe!important;
+}
+.sideways-tabs.right-tabs .nav-link:hover{
+    color: initial;
+}
+  .safetyPlanRow{
+      flex-wrap: nowrap;
+  }
+  .tabContainer{
+      width: 111%;
+      padding-right: 0px;
+      background-color: #fefefe;
+      height: 720px;
+  }
+  .warningSignsDisabled{
+      background-color: #942A9F!important;
+  }
+  .myNetworkDisabled{
+      background-color: #2766A7!important;
+  }
+  .copingSkillsDisabled{
+      background-color: #10A1AF!important;
+  }
+  .myHappyPlaceDisabled{
+      background-color: #2A9F51!important;
+  }
+  .nav-tabs .nav-link{
+    background-color: #F6A623;
+  }
+  .safetyPlanIcon, .warningSignsIcon, .myNetworkIcon, .copingSkillIcon, .myHappyPlaceIcon{
+    text-align: center;
+  }
+  .safetyPlanIcon{
+    color: #F6A623;
+  }
+  .safetyPlanIcon i, .warningSignsIcon i, .myNetworkIcon i, .copingSkillIcon i, .myHappyPlaceIcon i{
+      margin: 30px;
+  }
+  .warningSignsIcon{
+    color: #942A9F!important;
+  }
+  .myNetworkIcon{
+      color: #2766A7;
+  }
+  .copingSkillIcon{
+      color: #10A1AF;
+  }
+  .myHappyPlaceIcon{
+      color: #2A9F51;
+  }
+.cstmTabCol{
+    width: 100px;
+    margin-left: -10px;
+    margin-right: -50px;
+}
+
+/* Card Styles */
+.card{
+    border: none;
+    margin-top: 4vh;
+    margin-bottom: 4vh;
+}
+.rightCard{
+    width: 80%;
+    margin-left: 20%;
+}
+.leftCard{
+    width: 80%;
+    margin-right: 20%;
+}
+.prplGradientCard{
+    background-image: linear-gradient(to bottom, #942A9F, #4A1550);
+    box-shadow: 0px 3px 12px 0px rgba(24, 7, 26, 0.4);
+}
+.grnGradientCard{
+    background-image: linear-gradient(to bottom, #2A9F51, #155029);
+    border-top-right-radius: 44px; 
+    border-bottom-right-radius: 44px;
+    box-shadow: 0px 3px 12px 0px rgba(7, 26, 13, 0.4);
+}
+.aquaGradientCard{
+    background-image: linear-gradient(to bottom, #10A1AF, #085158); 
+    box-shadow: 0px 3px 12px 0px rgba(2, 24, 26, 0.4);
+}
+.prplGradientCard, .aquaGradientCard{
+    border-top-left-radius: 44px; 
+    border-bottom-left-radius: 44px;
+}
+.whtIconML{
+    color: white;
+    margin-left: 100px;
+}
+
+/* Mood Tracker */
+.moodTracker-topCard{
+    margin-top: 1vh;
+    margin-bottom: 3vh;
+}
+.moodHeader{
+    font-size: 26px;
+    margin-bottom: 0px;
+}
+.active {
+    color: #2A9F51 !important;
+    background-color: transparent;
+}
+.emoteButt{
+    background-color: transparent;
+    color: #4A1550;
+    width: auto;
+    border: none;
+    margin-bottom: 10px;
+    padding: 0px;
+}
+.emoteButt:not(:disabled):not(.disabled).active, .emoteButt:not(:disabled):not(.disabled):active, .show>.emoteButt.dropdown-toggle{
+    background-color: transparent;
+    border: none;
+    box-shadow: none!important;
+}
+.emoteButt:focus, .emoteButt:active{
+    outline: none;
+    border: none;
+    box-shadow: none;
+}
+.emoteButt p{
+    margin-bottom: 0px;
+}
+  .emoticon p{
+    padding: 5px;
+  }
+.moodTextArea{
+    border-bottom-right-radius: 24px;
+}
+.recordYourThoughtsContainer{
+    margin-top: 0vh;
+    margin-bottom: 1vh;
+}
+.activityButton{
+    margin-top: 1vh;
+    margin-bottom: 16vh;
+}
+
+/* Footer */
+
+.footerButtons {
+    align-items: center;
+}
+
+.footerButtons {
+    align-items: center;
+}
+
+.fa-circle {
+    color: #2766A7;
+    align-items: center;
+    justify-items: center;
+}
+
+.footerButtonText {
+    justify-items: center;
+    align-items: space-around;
+    display: block;
+    padding-top: 60px;
+}
+
+.bottomNav {
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+    padding: 0px!important;
+    background-color: #F6A623;
+    border-top-left-radius: 44px;
+    border-top-right-radius: 44px;
+    font-size: 0.5em;
+    margin: auto;
+    height: 14vh;
+    box-shadow: 0px 3px 12px 0px rgba(74, 21, 80, 0.8);
+}
+
+.iconBlock {
+    display: inline-block;
+    text-align: center;
+}
+
+.navItem {
+    display: flex;
+    justify-content: center;
+    padding: 0px;
+}
+
+.splashContent{
+    text-align: center;
+}
+.fas-icon-styles{
+    padding: 30px;
+}

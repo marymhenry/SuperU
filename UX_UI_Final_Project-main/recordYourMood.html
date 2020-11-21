@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Super U! Mood Tracker</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <link href="css/styles.css" rel="stylesheet" type="text/css">
+  
+  <!-- Font Awesome -->
+  <script src="https://kit.fontawesome.com/5c1df3cbd8.js" crossorigin="anonymous"></script>
+  
+</head>
+
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-light">
+    <div>
+      <a class="navbar-brand" href="home_screen.html">
+        <img class="logoHrzl" src="images/logo_hrzl.svg">
+      </a>
+    </div>
+    <div class="topNavIcons">
+      <a href="profile_screen.html">
+        <span class="fa-stack fa-1x">
+          <i class="fas fa-circle fa-stack-2x"></i>
+          <i class="fas fa-user fa-stack-1x fa-inverse topNavIconColorChange"></i>
+        </span>
+      </a>
+      <a href="notifications.html">
+        <span class="fa-stack fa-1x">
+          <i class="fas fa-circle fa-stack-2x"></i>
+          <i class="fas fa-bell fa-stack-1x fa-inverse topNavIconColorChange"></i>
+        </span>
+      </a>
+    </div>
+  </nav>
+
+ <!-- Title -->
+  <div class="card bg-transparent text-white float-right rightCard moodTracker-topCard">
+    <div class="card-body prplGradientCard">
+      <h2 class="card-title moodHeader">How are you feeling?</h2>
+    </div>
+  </div>
+  <br>
+
+  <!-- Emoticons -->
+  <div class="container">
+    <div class="row">
+      
+      <div class="col-3 emoticon">
+        <button type="button" id="btnTired" class="btn btn-primary emoteButt" ng-click="levelOU()">
+          <i class="fas fa-tired fa-4x"></i>
+          <p>Tired</p>
+        </button>   
+      </div>
+
+      <div class="col-3 emoticon">
+        <button type="button" id="btnAngry" class="btn btn-primary emoteButt" ng-click="levelCD()">
+          <i class="fas fa-angry fa-4x"></i>
+          <p>Angry</p>
+        </button>
+      </div>
+
+      <div class="col-3 emoticon">
+        <button type="button" id="btnUnhappy" class="btn btn-primary emoteButt" ng-click="levelD()"> 
+          <i class="fas fa-frown fa-4x"></i>
+          <p>Unhappy</p>
+        </button>
+      </div>
+
+      <div class="col-3 emoticon">
+        <button type="button" id="btnSadTear" class="btn btn-primary emoteButt" ng-click="levelE()">
+          <i class="fas fa-sad-tear fa-4x"></i>
+          <p>Sad</p>
+        </button>
+      </div>
+
+      <div class="col-3 emoticon">
+        <button type="button" id="btnSadTear" class="btn btn-primary emoteButt" ng-click="levelF()">
+          <i class="fas fa-meh fa-4x"></i>
+          <p>Meh</p>
+        </button>
+      </div>
+
+      <div class="col-3 emoticon">
+        <button type="button" id="btnSmile" class="btn btn-primary emoteButt" ng-click="levelG()">
+          <i class="fas fa-smile fa-4x"></i>
+          <p>Content</p>
+        </button>
+      </div>
+
+      <div class="col-3 emoticon">
+        <button type="button" id="btnGrin" class="btn btn-primary emoteButt" ng-click="levelH()">
+          <i class="fas fa-grin fa-4x"></i>
+          <p>Happy</p>
+        </button>
+      </div>
+
+      <div class="col-3 emoticon">
+        <button type="button" id="btnSadTear" class="btn btn-primary emoteButt" ng-click="levelI()">
+          <i class="fas fa-grin-squint-tears fa-4x"></i>
+          <p>Ecstatic</p>
+        </button>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Record Your Thoughts -->
+  <div class="card bg-transparent text-white float-left leftCard recordYourThoughtsContainer">
+    <div class="card-body grnGradientCard">
+      <h2 class="card-title moodHeader">Record your thoughts</h2>
+      <div class="form-group">
+        <label for="exampleFormControlTextarea1">Why do you feel the way you do?</label>
+        <textarea class="form-control moodTextArea" id="exampleFormControlTextarea1" rows="3"></textarea>
+      </div>
+    </div>
+  </div>
+  <br>
+
+  <!-- Activity Button -->
+  <div class="card bg-transparent text-white float-right rightCard activityButton">
+    <a href="activities_screen.html">
+      <div class="card-body aquaGradientCard">
+        <h2 class="card-title moodHeader rightArrow">Go to Activities</h2>
+      </div>
+    </a>
+  </div>
+
+  <!-- Footer -->
+  <div class="container fixed-bottom">
+    <div class="row bottomNav">
+      <div class="navItem col-1"></div>
+      <div class="navItem col-2">
+        <div class="iconBlock fa-3x">
+          <a href="home_screen.html"><i class="fas fa-circle fa-stack-2x"></i>
+            <i class="fas fa-home fa-stack-1x fa-inverse" style=" padding-top: 5px;"></i></a>
+        </div>
+        <div class="footerButtonText">
+          Home
+        </div>
+      </div>
+      <div class="navItem col-2">
+        <div class="iconBlock fa-3x">
+          <a href="safety_plan.html"><i class="fas fa-circle fa-stack-2x"></i>
+            <i class="fas fa-clipboard-list fa-stack-1x fa-inverse" style=" padding-top: 5px;"></i></a>
+        </div>
+        <br>
+        <div class="footerButtonText">
+          Safety Plan
+        </div>
+      </div>
+      <div class="navItem col-2">
+        <div class="iconBlock fa-3x">
+          <a href="crisis_connection_screen.html"><i class="fas fa-circle fa-stack-2x"></i>
+            <i class="fas fa-comment fa-stack-1x fa-inverse" style=" padding-top: 5px;"></i></a>
+        </div>
+        <br>
+        <div class="footerButtonText">
+          Chat
+        </div>
+      </div>
+      <div class="navItem col-2">
+        <div class="iconBlock fa-3x">
+          <a href="activities_screen.html"><i class="fas fa-circle fa-stack-2x"></i>
+            <i class="fas fa-user fa-stack-1x fa-inverse" style=" padding-top: 5px;"></i></a>
+        </div>
+        <br>
+        <div class="footerButtonText">
+          Activities
+        </div>
+      </div>
+      <div class="navItem col-2">
+        <div class="iconBlock fa-3x">
+          <a href="resources.html"><i class="fas fa-circle fa-stack-2x"></i>
+            <i class="fas fa-ellipsis-h fa-stack-1x fa-inverse" style=" padding-top: 5px;"></i></a>
+        </div>
+        <br>
+        <div class="footerButtonText">
+          Resources
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Footer -->
+
+
+
+</body>
+
+<!-- jQuery and JS bundle w/ Popper.js -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+  integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+
+<script src="js/index.js" type="text/javascript"></script>
+
+</html>

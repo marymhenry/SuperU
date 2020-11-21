@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>UX UI FINAL PROJECT</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+    integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+  <link href="css/styles.css" rel="stylesheet" type="text/css">
+
+  <script src="https://kit.fontawesome.com/5c1df3cbd8.js" crossorigin="anonymous"></script>
+
+  <style>
+    .tipCard {
+      background-color: transparent;
+      border: none;
+      margin-right: -15px;
+    }
+
+    .moodCardHeader {
+      background-image: linear-gradient(to bottom, rgba(148, 42, 159, 1), rgba(74, 21, 80, 1));
+      margin-left: 20%;
+      margin-bottom: 0px;
+      border-radius: 44px 0px 0px 44px !important;
+      box-shadow: -3px 3px 12px 0px rgba(0, 0, 0, 0.40);
+    }
+
+    .moodCardHeader h2,
+    .card-body h2 {
+      font-size: 28px;
+      padding-left: 5px;
+    }
+
+    .card-body h2 {
+      color: white;
+    }
+
+    .tip {
+      color: white;
+      text-decoration: none;
+    }
+
+    .tip:hover {
+      color: white;
+      text-decoration: none;
+    }
+
+    .readMoreTip {
+      color: white;
+      padding-left: 10px;
+      background-color: transparent;
+      margin-bottom: 0px;
+      text-decoration: underline;
+    }
+
+    .readMoreTip:hover {
+      color: white;
+    }
+
+    .readMoreTip p {
+      padding-left: 5px;
+    }
+
+    .tipCardSubtext {
+      padding: 0px 10px;
+      color: #FAC900;
+    }
+
+    .tipCardSubtext i {
+      float: left;
+      padding-right: 5px;
+    }
+
+    .tipCardSubtext p {
+      padding-top: 5px;
+    }
+
+    .recordYourMoodCard {
+      vertical-align: bottom;
+      border: 0;
+      padding-bottom: 0px;
+      background-image: linear-gradient(to bottom, #2A9F51, #155029);
+      border-top-right-radius: 44px;
+      border-bottom-right-radius: 44px;
+      margin-right: 20%;
+      box-shadow: 3px 3px 12px 0px rgba(0, 0, 0, 0.40);
+      margin-top: 20px;
+      margin-bottom: 20px;
+    }
+
+    .recordYourMoodCard img {
+      margin-left: -32px;
+      margin-bottom: -1px;
+    }
+
+    .activityCard {
+      vertical-align: bottom;
+      border: 0;
+      background-image: linear-gradient(to bottom, #10A1AF, #085158);
+      border-top-left-radius: 44px;
+      border-bottom-left-radius: 44px;
+      box-shadow: -3px 3px 12px 0px rgba(0, 0, 0, 0.40);
+      margin-left: 20%;
+      margin-top: 20px;
+      margin-bottom: 20px;
+      margin-right: -15px;
+    }
+    .activityCard p, .recordYourMoodCard p{
+      color: #FAC900;
+    }
+    .activityCard p{
+      margin-bottom: 5px;
+      padding-left: 10px;
+    }
+    .activityCard i{
+      padding: 5px 10px;
+      color: #FAC900;
+    }
+    .moodSelectionContainer{
+      padding-top: 30px;
+    }
+    .emoticon{
+      text-align: center;
+    }
+    .emoticon p{
+      padding: 5px;
+    }
+    .recordYourThoughts{
+      border: 0;
+      background-image: linear-gradient(to bottom, #2A9F51, #155029);
+      border-top-right-radius: 44px;
+      border-bottom-right-radius: 44px;
+      margin-right: 20%;
+      box-shadow: 3px 3px 12px 0px rgba(0, 0, 0, 0.40);
+    }
+    .moodTitle{
+      padding: 0.75rem;
+    }
+    .moodTextLabel{
+      color: white;
+    }
+    .cardWrapper{
+      padding-right: 0px;
+      padding-left: 0px;
+    }
+    .active {
+      color: #2A9F51 !important;
+      background-color: transparent;
+    }
+    .emoteButt{
+      background-color: transparent;
+      color: #4A1550;
+      width: auto;
+      border: none;
+      margin-bottom: 10px;
+      padding: 0px;
+    }
+    .emoteButt:not(:disabled):not(.disabled).active, .emoteButt:not(:disabled):not(.disabled):active, .show>.emoteButt.dropdown-toggle{
+      background-color: transparent;
+      border: none;
+      box-shadow: none!important;
+    }
+    .emoteButt:focus, .emoteButt:active{
+      outline: none;
+      border: none;
+      box-shadow: none;
+    }
+    .emoteButt p{
+      margin-bottom: 0px;
+    }
+  </style>
+
+</head>
+
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-light" style="padding-bottom: 10px;">
+    <div>
+      <a class="navbar-brand" href="home_screen.html">
+        <img class="logoHrzl" src="images/logo_hrzl.svg">
+      </a>
+    </div>
+    <div class="topNavIcons">
+      <a href="profile_screen.html">
+        <span class="fa-stack fa-1x">
+          <i class="fas fa-circle fa-stack-2x"></i>
+          <i class="fas fa-user fa-stack-1x fa-inverse topNavIconColorChange"></i>
+        </span>
+      </a>
+      <a href="notifications.html">
+        <span class="fa-stack fa-1x">
+          <i class="fas fa-circle fa-stack-2x"></i>
+          <i class="fas fa-bell fa-stack-1x fa-inverse topNavIconColorChange"></i>
+        </span>
+      </a>
+    </div>
+  </nav>
+
+<div class="container cardWrapper">
+  <div class="row">
+    <div class="col moodCardHeader">
+        <div class="card-body moodTitle">
+          <h2>How are you feeling?</h2>
+        </div>
+    </div>
+  </div>
+</div>
+
+<div class="container moodSelectionContainer">
+  <div class="row">
+    <div class="col-3 emoticon">
+      <button type="button" id="btnTired" class="btn btn-primary emoteButt" ng-click="levelOU()">
+        <i class="fas fa-tired fa-4x"></i>
+        <p>Tired</p>
+       </button>      
+    </div>
+
+    <div class="col-3 emoticon">
+      <button type="button" id="btnAngry" class="btn btn-primary emoteButt" ng-click="levelCD()">
+        <i class="fas fa-angry fa-4x"></i>
+        <p>Angry</p>
+      </button>
+    </div>
+
+    <div class="col-3 emoticon">
+      <button type="button" id="btnUnhappy" class="btn btn-primary emoteButt" ng-click="levelD()"> 
+        <i class="fas fa-frown fa-4x"></i>
+        <p>Unhappy</p>
+      </button>
+    </div>
+
+    <div class="col-3 emoticon">
+      <button type="button" id="btnSadTear" class="btn btn-primary emoteButt" ng-click="levelE()">
+        <i class="fas fa-sad-tear fa-4x"></i>
+        <p>Sad</p>
+      </button>
+    </div>
+
+    <div class="col-3 emoticon">
+      <button type="button" id="btnSadTear" class="btn btn-primary emoteButt" ng-click="levelF()">
+        <i class="fas fa-meh fa-4x"></i>
+        <p>Meh</p>
+      </button>
+    </div>
+
+    <div class="col-3 emoticon">
+      <button type="button" id="btnSmile" class="btn btn-primary emoteButt" ng-click="levelG()">
+        <i class="fas fa-smile fa-4x"></i>
+        <p>Content</p>
+      </button>
+    </div>
+
+    <div class="col-3 emoticon">
+      <button type="button" id="btnGrin" class="btn btn-primary emoteButt" ng-click="levelH()">
+        <i class="fas fa-grin fa-4x"></i>
+        <p>Happy</p>
+      </button>
+    </div>
+
+    <div class="col-3 emoticon">
+      <button type="button" id="btnSadTear" class="btn btn-primary emoteButt" ng-click="levelI()">
+        <i class="fas fa-grin-squint-tears fa-4x"></i>
+        <p>Ecstatic</p>
+      </button>
+    </div>
+
+  </div>
+</div>
+
+<div class="container cardWrapper">
+  <div class="row">
+    <div class="col">
+      
+      <div class="card-body recordYourThoughts">
+        <h2>Record your thoughts</h2>
+        <div class="form-group moodTextLabel">
+          <label for="exampleFormControlTextarea1">Why do you feel the way you do?</label>
+          <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <a href="#">
+    <div class="card-body activityCard">
+      <h2>Go to Activities &amp; Games</h2>
+    </div>
+  </a>
+
+
+
+
+  <!-- Footer -->
+  <div class="container fixed-bottom">
+    <div class="row bottomNav">
+      <div class="navItem col-1"></div>
+      <div class="navItem col-2">
+        <div class="iconBlock fa-3x">
+          <i class="fas fa-circle fa-stack-2x"></i>
+          <i class="fas fa-home fa-stack-1x fa-inverse" style=" padding-top: 5px;"></i>
+        </div>
+        <div class="footerButtonText">
+          Home
+        </div>
+      </div>
+      <div class="navItem col-2">
+        <div class="iconBlock fa-3x">
+          <i class="fas fa-circle fa-stack-2x"></i>
+          <i class="fas fa-clipboard-list fa-stack-1x fa-inverse" style=" padding-top: 5px;"></i>
+        </div>
+        <br>
+        <div class="footerButtonText">
+          Safety Plan
+        </div>
+      </div>
+      <div class="navItem col-2">
+        <div class="iconBlock fa-3x">
+          <i class="fas fa-circle fa-stack-2x"></i>
+          <i class="fas fa-comment fa-stack-1x fa-inverse" style=" padding-top: 5px;"></i>
+        </div>
+        <br>
+        <div class="footerButtonText">
+          Chat
+        </div>
+      </div>
+      <div class="navItem col-2">
+        <div class="iconBlock fa-3x">
+          <i class="fas fa-circle fa-stack-2x"></i>
+          <i class="fas fa-user fa-stack-1x fa-inverse" style=" padding-top: 5px;"></i>
+        </div>
+        <br>
+        <div class="footerButtonText">
+          Profile
+        </div>
+      </div>
+      <div class="navItem col-2">
+        <div class="iconBlock fa-3x">
+          <i class="fas fa-circle fa-stack-2x"></i>
+          <i class="fas fa-ellipsis-h fa-stack-1x fa-inverse" style=" padding-top: 5px;"></i>
+        </div>
+        <br>
+        <div class="footerButtonText">
+          Resources
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Footer -->
+
+
+
+</body>
+
+<!-- jQuery and JS bundle w/ Popper.js -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+  integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+
+<script src="js/index.js" type="text/javascript"></script>
+
+
+
+</html>
